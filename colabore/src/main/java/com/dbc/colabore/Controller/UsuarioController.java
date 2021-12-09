@@ -1,6 +1,5 @@
 package com.dbc.colabore.Controller;
 
-import com.dbc.colabore.dto.LoginDTO;
 import com.dbc.colabore.dto.UsuarioCreateDTO;
 import com.dbc.colabore.dto.UsuarioDTO;
 import io.swagger.annotations.ApiOperation;
