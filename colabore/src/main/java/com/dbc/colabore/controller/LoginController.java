@@ -1,12 +1,9 @@
 package com.dbc.colabore.controller;
 
-import com.dbc.biblioteca.dto.LoginDTO;
-import com.dbc.biblioteca.dto.UsuarioCreateDTO;
-import com.dbc.biblioteca.dto.UsuarioDTO;
-import com.dbc.biblioteca.entity.UsuarioEntity;
-import com.dbc.biblioteca.security.TokenService;
-import com.dbc.biblioteca.service.UsuarioService;
 import com.dbc.colabore.dto.LoginDTO;
+import com.dbc.colabore.dto.UsuarioCreateDTO;
+import com.dbc.colabore.dto.UsuarioDTO;
+import com.dbc.colabore.entity.UsuarioEntity;
 import com.dbc.colabore.security.TokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -27,7 +24,7 @@ import javax.validation.Valid;
 public class LoginController {
     private final AuthenticationManager authenticationManager;
     private final TokenService tokenService;
-    private final UsuarioService usuarioService;
+//    private final UsuarioService usuarioService;
 
     @PostMapping
     public String login(@RequestBody @Valid LoginDTO loginDTO) {
@@ -43,8 +40,8 @@ public class LoginController {
         return token;
     }
 
-    @PostMapping("/create")
-    public UsuarioDTO createLogin(@RequestBody @Valid UsuarioCreateDTO usuarioCreateDTO) {
-        return usuarioService.create(usuarioCreateDTO);
-    }
+//    @PostMapping("/create")
+//    public UsuarioDTO createLogin(@RequestBody @Valid UsuarioCreateDTO usuarioCreateDTO) {
+//        return usuarioService.create(usuarioCreateDTO); //TODO necessario service
+//    }
 }
