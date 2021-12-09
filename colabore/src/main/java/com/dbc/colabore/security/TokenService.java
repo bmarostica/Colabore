@@ -1,6 +1,6 @@
 package com.dbc.colabore.security;
 
-import com.dbc.biblioteca.entity.UsuarioEntity;
+import com.dbc.colabore.entity.UsuarioEntity;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -42,7 +42,7 @@ public class TokenService {
                 .collect(Collectors.toList());
 
         String jwtToken = Jwts.builder()
-                .setIssuer("pessoa-api")
+                .setIssuer("colabore-api")
                 .claim(CLAIM_PERMISSOES, permissoes)
                 .setSubject(usuario.getIdUsuario().toString())
                 .setIssuedAt(generateDate)
