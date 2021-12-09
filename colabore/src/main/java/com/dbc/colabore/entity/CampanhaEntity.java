@@ -12,6 +12,10 @@ public class CampanhaEntity {
     private BigDecimal totalArrecadado;
     private List<String> tagsCategoria;
     private LocalDateTime ultimaAlteracao;
+    private StatusCampanha statusCampanha;
+    private String descricaoCampanha;
+    private Usuario criadorCampanha;
+    private List<Usuario> usuariosContribuidores;
 
 
 
