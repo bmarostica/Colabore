@@ -24,8 +24,8 @@ public class CampanhaEntity {
     private LocalDateTime ultimaAlteracao;
     private StatusCampanha statusCampanha;
     private String descricaoCampanha;
-    private Usuario criadorCampanha;
-    private List<Usuario> usuariosContribuidores;
+    private UsuarioEntity criadorCampanha;
+    private List<UsuarioEntity> usuariosContribuidores;
 
 
 
